@@ -1,16 +1,50 @@
-# React + Vite
+# 🌾 AgroSynapse: Zero-Barrier Predictive Crop Health Companion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=Twilio&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-Currently, two official plugins are available:
+> **Moving Indian Agriculture from Reactive Guesswork to Predictive Data Science.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 About the Prototype
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Current AgriTech solutions abandon rural Indian farmers by demanding 4G internet, expensive smartphones, and formal literacy. **AgroSynapse** is an offline-first, AI-driven crop health companion built to shatter these barriers. 
 
-## Expanding the ESLint configuration
+Instead of waiting for visible crop damage to apply expensive treatments, our prototype ingests real-time IoT telemetry to mathematically forecast biological threats *before* they occur. We democratize enterprise-level agricultural data science, making it accessible to the most vulnerable communities.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✨ Key Features of the Prototype
+
+* 📡 **Predictive IoT Engine:** Simulates real-time sensor data (NPK levels, deep-soil moisture, acoustic pest signatures) to proactively identify crop threats.
+* 🗣️ **Voice-First UI (Cognitive Inclusion):** Bypasses the literacy barrier entirely. Using the native Web Speech API, it translates complex scientific metrics into intuitive, regional-language audio alerts (e.g., "Mitti mein nami kam hai").
+* 📵 **Unbreakable Offline Fallback:** Designed for the digital divide. When internet or smartphone access fails, the system automatically triggers Twilio-powered SMS alerts directly to basic feature phones.
+
+---
+
+## 💻 Technology Stack
+
+* **Frontend:** React.js, Vite, Tailwind CSS
+* **Voice AI:** Web Speech API (for native multilingual Text-to-Speech)
+* **Backend:** FastAPI (Python), Pydantic (Schema validation), Uvicorn
+* **IoT Simulator:** Python-based real-time telemetry generation
+* **Offline Pipeline:** Twilio SDK for automated SMS routing
+
+---
+
+## ⚙️ How to Run Locally (For Judges)
+
+### 1. Frontend Setup
+```bash
+# Clone the repository
+git clone [https://github.com/YUVAAN297/Agrosynapse.git](https://github.com/YUVAAN297/Agrosynapse.git)
+
+# Navigate to the frontend directory
+cd Agrosynapse
+
+# Install dependencies
+npm install
+
+# Start the Vite development server
+npm run dev
