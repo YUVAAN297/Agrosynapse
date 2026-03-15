@@ -1,52 +1,37 @@
-# 🌾 AgroSynapse: Zero-Barrier Predictive Crop Health Companion
+# 🌾 AgroSynapse: Empowering the Grassroots Farmer
 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=Twilio&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
-> **Moving Indian Agriculture from Reactive Guesswork to Predictive Data Science.**
+AgroSynapse is a "Zero-Barrier" AI-driven prototype designed to move Indian agriculture from reactive guesswork to predictive data science. We built this to solve a simple problem: **Farmers shouldn't need a PhD or a 5G connection to save their crops.**
 
 ---
 
-## 🚀 About the Prototype
+## 🛠️ The Prototype: How it Works
 
-Current AgriTech solutions abandon rural Indian farmers by demanding 4G internet, expensive smartphones, and formal literacy. **AgroSynapse** is an offline-first, AI-driven crop health companion built to shatter these barriers. 
+Since we don't have physical IoT sensors plugged into your machine, we have built a **Real-Time IoT Simulator** inside the backend. 
 
-Instead of waiting for visible crop damage to apply expensive treatments, our prototype ingests real-time IoT telemetry to mathematically forecast biological threats *before* they occur. We democratize enterprise-level agricultural data science, making it accessible to the most vulnerable communities.
-
-### ✨ Key Features of the Prototype
-
-* 📡 **Predictive IoT Engine:** Simulates real-time sensor data (NPK levels, deep-soil moisture, acoustic pest signatures) to proactively identify crop threats.
-* 🗣️ **Voice-First UI (Cognitive Inclusion):** Bypasses the literacy barrier entirely. Using the native Web Speech API, it translates complex scientific metrics into intuitive, regional-language audio alerts (e.g., "Mitti mein nami kam hai").
-* 📵 **Unbreakable Offline Fallback:** Designed for the digital divide. When internet or smartphone access fails, the system automatically triggers Twilio-powered SMS alerts directly to basic feature phones.
+1. **The Simulator:** A Python logic that mimics real soil sensors, generating live telemetry data (NPK levels, deep-soil moisture, and pest acoustic signatures).
+2. **The Brain (Backend):** A FastAPI server that ingests this data, processes it, and decides if the farmer needs an alert.
+3. **The Voice (Frontend):** A React dashboard that uses the **Web Speech API** to talk to the farmer in their native language (e.g., Hindi) about their crop health.
+4. **The Safety Net:** If the farmer is offline, the system triggers a **Twilio SMS** alert to any basic feature phone.
 
 ---
 
-## 💻 Technology Stack
+## ⚙️ Setup & Installation (One Shot)
 
-* **Frontend:** React.js, Vite, Tailwind CSS
-* **Voice AI:** Web Speech API (for native multilingual Text-to-Speech)
-* **Backend:** FastAPI (Python), Pydantic (Schema validation), Uvicorn
-* **IoT Simulator:** Python-based real-time telemetry generation
-* **Offline Pipeline:** Twilio SDK for automated SMS routing
+To see the end-to-end flow, you will need to run two terminals.
 
----
-
-## ⚙️ How to Run Locally (For Judges)
-
-### 1. Frontend Setup
+### 1. Backend & IoT Simulator Setup
 ```bash
-# Clone the repository
-git clone [https://github.com/YUVAAN297/Agrosynapse.git](https://github.com/YUVAAN297/Agrosynapse.git)
+# Navigate to the backend folder
+cd backend
 
-# Navigate to the frontend directory
-cd Agrosynapse
+# Create a virtual environment
+python -m venv venv
+
+# Activate the environment
+# On Windows: venv\Scripts\activate | On Mac/Linux: source venv/bin/activate
 
 # Install dependencies
-npm install
+pip install -r requirements.txt
 
-# Start the Vite development server
-npm run dev
- About Us & Our Vision
-We are a team of passionate developers participating in the IBM Hackathon with a single, clear vision: Zero-Barrier Technology. We observed that the farmers who desperately need predictive data science are the ones completely locked out of it due to hardware dependencies and language constraints. AgroSynapse is our answer to this systemic exclusion. We believe that technology should adapt to the farmer, not the other way around. By fusing real-time IoT tracking, semantic AI voice translation, and offline cellular delivery, we aim to eradicate agricultural debt, reduce psychological stress, and uplift rural livelihoods.
+# Start the Backend + Live Simulator
+uvicorn main:app --reload
