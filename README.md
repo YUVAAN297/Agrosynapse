@@ -36,12 +36,9 @@ pip install -r requirements.txt
 # Start the Backend + Live Simulator
 uvicorn main:app --reload
 
-2. Frontend Dashboard Setup
+### 1. Backend & IoT Simulator Setup
+```bash
 
-# Open a NEW terminal and go to the frontend folder
-cd frontend
-
-# Install dependencies
 npm install
 
 # Launch the dashboard
