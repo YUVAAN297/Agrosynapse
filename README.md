@@ -48,3 +48,5 @@ npm install
 
 # Start the Vite development server
 npm run dev
+ About Us & Our Vision
+We are a team of passionate developers participating in the IBM Hackathon with a single, clear vision: Zero-Barrier Technology. We observed that the farmers who desperately need predictive data science are the ones completely locked out of it due to hardware dependencies and language constraints. AgroSynapse is our answer to this systemic exclusion. We believe that technology should adapt to the farmer, not the other way around. By fusing real-time IoT tracking, semantic AI voice translation, and offline cellular delivery, we aim to eradicate agricultural debt, reduce psychological stress, and uplift rural livelihoods.
