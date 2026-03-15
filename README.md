@@ -18,6 +18,11 @@ Since we don't have physical IoT sensors plugged into your machine, we have buil
 ## ⚙️ Setup & Installation
 
 To see the prototype in action, you need to run **two separate terminals** simultaneously.
+1. **Clone & Install:**
+   ```bash
+   git clone [https://github.com/YUVAAN297/Agrosynapse.git](https://github.com/YUVAAN297/Agrosynapse.git)
+   cd Agrosynapse
+   npm install
 
 ### 🏁 Terminal 1: Backend & IoT Simulator
 This terminal handles the "mock" sensor data generation and API logic.
@@ -35,4 +40,10 @@ uvicorn main:app --reload
 cd frontend
 npm install
 npm run dev
+```
+### 🏁 Terminal 3: IOT SIMULATOR
+```
+cd backend
+python stress_detect.py
+
 
