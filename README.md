@@ -27,7 +27,11 @@ python -m venv venv
 # Windows: venv\Scripts\activate | Mac/Linux: source venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload
-``` 
+
+
+ ```
+### 🏁 Terminal 2: Frontend Dashboard  
+```
 cd frontend
 npm install
 npm run dev
